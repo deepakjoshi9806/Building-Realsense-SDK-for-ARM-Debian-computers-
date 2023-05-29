@@ -18,7 +18,7 @@ cmake ../ -DFORCE_RSUSB_BACKEND=ON -DBUILD_EXAMPLES=true  -DBUILD_PYTHON_BINDING
 > `make -jX` is responsible for multi-threading and job scheduling.
 - export python path and store it in .bashrc 
 `export 'PYTHONPATH=/usr/local/lib/python3.7/pyrealsense2' >> ~/.bashrc`
-> this lets you fix permissions and build code throughout the filesystem
+> this lets you fix path issues and build code throughout the filesystem
 - copy the rules to  to udev
 `cd /path/to/librealsense2.53.1`
 `sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/`
