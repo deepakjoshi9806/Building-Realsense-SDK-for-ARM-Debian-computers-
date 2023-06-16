@@ -2,12 +2,12 @@
 >make sure atleast 4GB of virtual memory is available (RAM+ SWAP >= 4GB)
 #### As the pre-built binaries are for AMD systems, we'll built the sdk from source. We make use of the RSUSB method which is kernel independent.
 - install the core packages
-`sudo apt-get install git libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev` 
+- `sudo apt-get install git libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev` 
 - install and unzip the latest sdk
-`wget https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.53.1.zip`
-`unzip v2.53.1.zip`
-`cd librealsense-2.53.1`
-`mkdir build && cd build`
+- `wget https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.53.1.zip`
+- `unzip v2.53.1.zip`
+- `cd librealsense-2.53.1`
+- `mkdir build && cd build`
 > we then build the backend without specifying the cuda path or by setting it to false
 ````
 cmake ../ -DFORCE_RSUSB_BACKEND=ON -DBUILD_EXAMPLES=true  -DBUILD_PYTHON_BINDINGS:bool=true -DBUILD_GRAPHICAL_EXAMPLES=false -DPYTHON_EXECUTABLE=/usr/bin/python3
